@@ -1,0 +1,22 @@
+<?php
+
+/** @var string $selector */
+/** @var array $settings */
+
+$css = array();
+$transition = array();
+
+foreach (array_reverse($settings) as $layer) {
+    switch ($layer['type']) {
+        case "rotate": // не может применятся дважды. поэотму переопределяем
+            $css['rotate'] = "-moz-transform: rotate({$layer['rotate_angle']}deg);";
+            $css['rotate'] .= "-o-transform: rotate({$layer['rotate_angle']}deg);";
+            $css['rotate'] .= "-webkit-transform: rotate({$layer['rotate_angle']}deg);";
+            $css['rotate'] .= "transform: rotate({$layer['rotate_angle']}deg);";
+            break;
+    }
+}
+if (!$css) {
+    return '';
+}
+return "$selector{" . join("\n", $css) . "}\n";

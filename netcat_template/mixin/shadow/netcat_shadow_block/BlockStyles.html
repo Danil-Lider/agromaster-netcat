@@ -1,0 +1,18 @@
+<?php
+
+/** @var string $selector */
+/** @var array $settings */
+/** @var array $shadow */
+
+$shadow = array();
+$shadow[] = (1 == $settings['inset'] ? "inset" : "");
+$shadow[] = ($settings['horizontal'] ?: "0") . "px";
+$shadow[] = ($settings['vertical'] ? : "0"). "px";
+$shadow[] = ($settings['blur'] ? : "0"). "px";
+$shadow[] = ($settings['spread'] ? : "0"). "px";
+$shadow[] = ($settings['color'] ? : "#000000");
+
+$shadow = implode(" ", $shadow);
+$CSS = "{$selector} { -webkit-box-shadow: {$shadow}; box-shadow: {$shadow}; }";
+
+return $CSS;
