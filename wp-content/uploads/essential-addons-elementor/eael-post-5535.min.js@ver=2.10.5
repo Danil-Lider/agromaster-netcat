@@ -1,0 +1,1 @@
+(function($){window.isEditMode=!1;$(window).on("elementor/frontend/init",function(){window.isEditMode=elementorFrontend.isEditMode()})})(jQuery)
