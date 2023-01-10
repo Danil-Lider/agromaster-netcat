@@ -1,0 +1,125 @@
+<!-- FormPrefix --><?= $f_AdminCommon; ?>
+<style>
+body.custom-background {
+    background-image: url(https://pk-agromaster.ru/wp-content/uploads/2019/03/rozh.jpg) !important;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.elementor-7342 .elementor-element.elementor-element-b9aac22{text-align:center;}.elementor-7342 .elementor-element.elementor-element-b9aac22 .elementor-heading-title{font-size:42px;}.elementor-7342 .elementor-element.elementor-element-d882669 .jet-posts .jet-posts__inner-box{background-color:rgba(255,255,255,0.61);border-radius:10px 10px 10px 10px;}.elementor-7342 .elementor-element.elementor-element-d882669 .jet-posts .entry-title a:hover{color:#da251d;}.elementor-7342 .elementor-element.elementor-element-d882669 .jet-posts .entry-title{font-size:16px;text-align:center;}.elementor-7342 .elementor-element.elementor-element-d882669 .jet-posts .post-meta{text-align:left;}.elementor-7342 .elementor-element.elementor-element-d882669 .jet-posts .entry-excerpt{text-align:left;}.elementor-7342 .elementor-element.elementor-element-d882669 .jet-posts .jet-more{text-decoration:none;align-self:center;}.elementor-7342 .elementor-element.elementor-element-d882669 .jet-posts .jet-more:hover{text-decoration:none;}.elementor-7342 .elementor-element.elementor-element-d882669 .jet-carousel .jet-slick-dots li{padding-left:5px;padding-right:5px;}.elementor-7342 .elementor-element.elementor-element-d882669 .jet-carousel .jet-slick-dots{justify-content:center;}.elementor-7342 .elementor-element.elementor-element-d882669 .jet-title-fields__item-label{margin-right:5px;}.elementor-7342 .elementor-element.elementor-element-d882669 .jet-content-fields__item-label{margin-right:5px;}
+
+</style>
+
+<div data-elementor-type="wp-post" data-elementor-id="7342" class="elementor elementor-7342" data-elementor-settings="[]">
+
+
+<section class="elementor-element elementor-element-70bc27f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="70bc27f" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-default">
+        <div class="elementor-row">
+            <div class="elementor-element elementor-element-3b63cdb elementor-column elementor-col-100 elementor-top-column" data-id="3b63cdb" data-element_type="column">
+                <div class="elementor-column-wrap  elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-b9aac22 elementor-widget elementor-widget-heading" data-id="b9aac22" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <? $sub_name = $db->get_row("SELECT `Subdivision_Name` FROM Subdivision WHERE Subdivision_ID = '"  . $sub. "' ", ARRAY_A); ?>
+                                <h2 class="elementor-heading-title elementor-size-default"><?echo $sub_name['Subdivision_Name']; ?></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="elementor-element elementor-element-e3e9d23 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e3e9d23" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-default">
+        <div class="elementor-row">
+            <div class="elementor-element elementor-element-def2dd6 elementor-column elementor-col-100 elementor-top-column" data-id="def2dd6" data-element_type="column">
+                <div class="elementor-column-wrap  elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-d882669 elementor-widget elementor-widget-jet-posts" data-id="d882669" data-element_type="widget" data-widget_type="jet-posts.default">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-jet-posts jet-elements">
+                                    <div class="jet-posts col-row  jet-equal-cols">
+                                    
+                                    
+                                    
+                                    <?
+                                        
+                                        $subs = $db->get_results("SELECT * FROM Subdivision WHERE Parent_Sub_ID = '"  . $sub . "' ", ARRAY_A);
+                                        
+                                    ?>
+                                    
+                                    <!--
+                                    <pre>
+                                    <? print_r($subs);?>
+                                    </pre>
+                                    -->
+                                    
+                                    <? foreach($subs as $item){ ?>
+                                    
+                                    
+
+                                      <div class="jet-posts__item col-desk-4 col-tab-2 col-mob-1">
+                                        <div class="jet-posts__inner-box">
+                                          <div class="post-thumbnail">
+                                            <a href="<?= $item['Hidden_URL'] ?>" class="post-thumbnail__link">
+                                            
+                                               <?
+                                                      $image = nc_file_path('Subdivision', $item['Subdivision_ID'], 'ncImage');
+                                                   
+                                               ?>
+                                                
+                                              <img class="post-thumbnail__img wp-post-image lazy-loaded" src="<?= $image?>" data-lazy-type="image" data-src="<?= $image?>" alt="<?= $item['Subdivision_Name'] ?>" width="370" height="270">
+                                             
+                                            </a>
+                                          </div>
+                                          <div class="jet-posts__inner-content">
+                                            <h4 class="entry-title">
+
+                                              <a href="<?= $item['Hidden_URL'] ?>">
+                                                  <?= $item['Subdivision_Name'] ?>
+                                              </a>
+
+
+                                            </h4>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    
+                                    <? } ?>
+                                    
+                                    
+                                    
+                                    
+                                    
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </section>
+  <div>
+
+
+
+                                        
+                                     
+
+                                        
+                                        
+                            <!-- /FormPrefix -->
+
+<!-- RecordTemplate --><?= $f_AdminButtons; ?><!-- /RecordTemplate -->
+
+<!-- FormSuffix --><!-- /FormSuffix -->

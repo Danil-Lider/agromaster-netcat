@@ -1,0 +1,22 @@
+<?/* Служебная часть */for ($f_RowNum = 0; $f_RowNum < $rowCount; $f_RowNum++) {    if($fetch_row[$f_RowNum] instanceof Iterator) {        extract($fetch_row[$f_RowNum]->to_array(), EXTR_PREFIX_ALL, "f");    } else {        extract($fetch_row[$f_RowNum], EXTR_PREFIX_ALL, "f");    }    foreach($iteration_RecordTemplate[$f_RowNum] as $value) {        extract($value);    }    eval($cc_env["convert2txt"]);    ob_start();/* Конец служебной части */?>
+<?= $f_AdminButtons; ?>
+
+ <div class="jet-posts__item col-desk-4 col-tab-2 col-mob-1">
+   <div class="jet-posts__inner-box">
+     <div class="post-thumbnail">
+       <a href="<?= $fullLink ?>" class="post-thumbnail__link">
+         <img class="post-thumbnail__img wp-post-image lazy-loaded" src="<?= $f_image ?>" data-lazy-type="image" data-src="<?= $f_image ?>" alt="Комбинированный посевной комплекс<br><p class='product-name'>«AGRATOR TILLERDISK»</p>" width="370" height="270">
+         <noscript><img class="post-thumbnail__img wp-post-image" src="<?= $f_image ?>" alt="Комбинированный посевной комплекс&lt;br&gt;&lt;p class=&#039;product-name&#039;&gt;«AGRATOR TILLERDISK»&lt;/p&gt;" width="370" height="270"></noscript>
+       </a>
+     </div>
+     <div class="jet-posts__inner-content">
+       <h4 class="entry-title">
+       
+         <a href="<?= $fullLink ?>"> <?= $f_name_top?><br><p class="product-name"><?= $f_name?></p></a>
+           
+       
+       </h4>
+     </div>
+   </div>
+</div>
+<?/* Служебная часть */    echo nc_finishing_RecordTemplate(ob_get_clean(), $inside_admin, $classID, $f_RowID, $parent_message, $cc, $cc_env["Class_Name"], $no_cache_marks);}/* Конец служебной части */?>

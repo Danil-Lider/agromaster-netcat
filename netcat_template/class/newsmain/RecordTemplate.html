@@ -1,0 +1,21 @@
+<?/* Служебная часть */for ($f_RowNum = 0; $f_RowNum < $rowCount; $f_RowNum++) {    if($fetch_row[$f_RowNum] instanceof Iterator) {        extract($fetch_row[$f_RowNum]->to_array(), EXTR_PREFIX_ALL, "f");    } else {        extract($fetch_row[$f_RowNum], EXTR_PREFIX_ALL, "f");    }    foreach($iteration_RecordTemplate[$f_RowNum] as $value) {        extract($value);    }    eval($cc_env["convert2txt"]);    ob_start();/* Конец служебной части */?>
+<?= $f_AdminButtons; ?>
+
+
+
+<div class="jet-posts__item col-desk-3 col-tab-2">
+  <div class="jet-posts__inner-box">
+    <div class="post-thumbnail">
+      <a href="<?= $fullLink ?>" class="post-thumbnail__link">
+        <img class="post-thumbnail__img wp-post-image lazy-loaded" src="<? echo $f_image ?>" data-lazy-type="image" data-src="<? echo $f_image ?>" alt="" width="640" height="506">
+        <noscript><img class="post-thumbnail__img wp-post-image" src="<? echo $f_image ?>" alt="" width="640" height="506"></noscript>
+      </a>
+    </div>
+    <div class="jet-posts__inner-content">
+      <h4 class="entry-title"><a href="<?= $fullLink ?>"><? echo $f_name?></a></h4>
+      <div class="entry-excerpt"><?echo $f_prev_text ?></div>
+      <div class="jet-more-wrap"><a href="<?= $fullLink ?>" class="btn btn-primary elementor-button elementor-size-md jet-more"><span class="btn__text">Подробнее</span></a></div>
+    </div>
+  </div>
+</div>
+<?/* Служебная часть */    echo nc_finishing_RecordTemplate(ob_get_clean(), $inside_admin, $classID, $f_RowID, $parent_message, $cc, $cc_env["Class_Name"], $no_cache_marks);}/* Конец служебной части */?>

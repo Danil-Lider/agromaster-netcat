@@ -1,0 +1,82 @@
+<!-- FormPrefix --><?= $f_AdminCommon; ?>
+МЕНЮ СЛЕВА
+<!-- /FormPrefix -->
+
+<!-- RecordTemplate --><?= $f_AdminButtons; ?>
+сам элемнт
+
+<? for($i =0; $i < 5; $i++){?>
+
+<?
+
+$title = 'f_title' . $i;
+$text = 'f_text' . $i;
+
+?>
+
+<? if($$title){ ?>
+
+<div class="info">
+  <input id="info__body_<?echo $i?>" class="info__switch" type="checkbox">
+  
+  
+  <label for="info__body_<?echo $i?>" class="info__headline"><?echo $$title?></label>
+  <div class="info__body">
+    <?echo $$text?>
+
+  </div>
+</div>
+
+<? } ?>
+
+<? } ?><!-- /RecordTemplate -->
+
+<!-- FormSuffix --><style>
+.info {
+  background-color: #f9f9ff;
+  padding: 10px 25px;
+}
+
+.info__switch {
+  display: none;
+}
+
+.info__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.info__switch:checked~.info__body {
+  max-height: 100px;
+}
+
+.info__headline::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 4px;
+  border: 6px solid #39739d;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.info__switch:checked~.info__headline::before {
+  transform: rotate(180deg) translateY(6px);
+}
+
+.info__headline {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  color: #39739d;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.info__headline:hover {
+  text-decoration: underline;
+}
+</style><!-- /FormSuffix -->
