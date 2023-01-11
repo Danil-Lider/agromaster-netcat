@@ -1,0 +1,22 @@
+<?/* Служебная часть */for ($f_RowNum = 0; $f_RowNum < $rowCount; $f_RowNum++) {    if($fetch_row[$f_RowNum] instanceof Iterator) {        extract($fetch_row[$f_RowNum]->to_array(), EXTR_PREFIX_ALL, "f");    } else {        extract($fetch_row[$f_RowNum], EXTR_PREFIX_ALL, "f");    }    foreach($iteration_RecordTemplate[$f_RowNum] as $value) {        extract($value);    }    eval($cc_env["convert2txt"]);    ob_start();/* Конец служебной части */?>
+<?= $f_AdminButtons; ?>
+
+<details>
+ <summary>
+<div class="elementor-toggle-item">
+  <div id="elementor-tab-title-2231" class="elementor-tab-title elementor-active" data-tab="1" role="tab" aria-controls="elementor-tab-content-2231">
+    <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+      <span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+      <span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+    </span>
+        <? echo $f_name ?>
+  </div>
+   </summary>
+  <div id="elementor-tab-content-2231" class="elementor-tab-content elementor-clearfix elementor-active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-2231" style="display: block;">
+    <p>&nbsp;</p>
+   
+    <? echo $f_html ?>
+  </div>
+</div>
+</details>
+<?/* Служебная часть */    echo nc_finishing_RecordTemplate(ob_get_clean(), $inside_admin, $classID, $f_RowID, $parent_message, $cc, $cc_env["Class_Name"], $no_cache_marks);}/* Конец служебной части */?>

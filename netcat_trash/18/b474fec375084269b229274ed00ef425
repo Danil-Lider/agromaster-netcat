@@ -6,11 +6,21 @@
       <EnglishName>finans</EnglishName>
       <Checked>1</Checked>
     </subdivision>
+    <subdivision subdivision_id="12" catalogue_id="1" parent_sub_id="0">
+      <Subdivision_Name>Дилеры</Subdivision_Name>
+      <EnglishName>dilery</EnglishName>
+      <Checked>1</Checked>
+    </subdivision>
   </subdivisions>
   <sub_classes>
     <sub_class sub_class_id="12" subdivision_id="10" class_id="18">
       <Sub_Class_Name>ФИНАНС</Sub_Class_Name>
       <EnglishName>finans</EnglishName>
+      <Checked>1</Checked>
+    </sub_class>
+    <sub_class sub_class_id="15" subdivision_id="12" class_id="18">
+      <Sub_Class_Name>Дилеры</Sub_Class_Name>
+      <EnglishName>dilery</EnglishName>
       <Checked>1</Checked>
     </sub_class>
   </sub_classes>
@@ -2484,6 +2494,46 @@
            break;
     }
 </script></div></div></div></div></div></div></div></section></div></div></div>]]></HTML>
+    </message>
+    <message message_id="4" class_id="18" subdivision_id="12" sub_class_id="15">
+      <User_ID>1</User_ID>
+      <Priority>5</Priority>
+      <Checked>1</Checked>
+      <IP>176.52.41.97</IP>
+      <UserAgent>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36</UserAgent>
+      <Parent_Message_ID>0</Parent_Message_ID>
+      <Created>2023-01-11 15:33:22</Created>
+      <LastUpdated>2023-01-11 15:33:22</LastUpdated>
+      <LastUser_ID>0</LastUser_ID>
+      <LastIP/>
+      <LastUserAgent/>
+      <Keyword/>
+      <HTML><![CDATA[<style>
+.elementor-5275 .elementor-element.elementor-element-fcf9447{text-align:center;}.elementor-5275 .elementor-element.elementor-element-fcf9447 .elementor-heading-title{font-size:32px;}.elementor-5275 .elementor-element.elementor-element-fcf9447 > .elementor-widget-container{margin:0px 0px 0px 0px;}.elementor-5275 .elementor-element.elementor-element-d256797 .jet-map{height:400px;}.elementor-5275 .elementor-element.elementor-element-d256797 > .elementor-widget-container{background-color:rgba(255,255,255,0);}.elementor-5275 .elementor-element.elementor-element-0aaf359 .elementor-text-editor{text-align:justify;}.elementor-5275 .elementor-element.elementor-element-f1e0de7:not(.elementor-motion-effects-element-type-background), .elementor-5275 .elementor-element.elementor-element-f1e0de7 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:rgba(255,255,255,0.52);}.elementor-5275 .elementor-element.elementor-element-f1e0de7{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;}.elementor-5275 .elementor-element.elementor-element-f1e0de7 > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}
+</style>]]></HTML>
+    </message>
+    <message message_id="3" class_id="18" subdivision_id="12" sub_class_id="15">
+      <User_ID>1</User_ID>
+      <Priority>2</Priority>
+      <Checked>1</Checked>
+      <IP>176.52.41.97</IP>
+      <UserAgent>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36</UserAgent>
+      <Parent_Message_ID>0</Parent_Message_ID>
+      <Created>2023-01-11 15:32:41</Created>
+      <LastUpdated>2023-01-11 15:34:23</LastUpdated>
+      <LastUser_ID>1</LastUser_ID>
+      <LastIP>176.52.41.97</LastIP>
+      <LastUserAgent>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36</LastUserAgent>
+      <Keyword/>
+      <HTML><![CDATA[<section class="elementor-element elementor-element-8400b6a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" data-id="8400b6a">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-8953b4d elementor-column elementor-col-100 elementor-top-column" data-element_type="column" data-id="8953b4d">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-fcf9447 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="fcf9447" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default" style="text-align: center;">Дилерская сеть</h4></div></div></div></div></div></div></div></section>]]></HTML>
     </message>
   </messages>
   <comments/>
